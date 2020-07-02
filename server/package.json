@@ -18,9 +18,16 @@
     "passport-local": "^1.0.0"
   },
   "scripts": {
+    "start": "node index.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "engines": {
+    "node": "10.0.0",
+    "npm": "5.1.0"
+  },
   "author": "",
   "license": "ISC"
+  
 }
